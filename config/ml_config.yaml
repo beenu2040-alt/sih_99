@@ -1,0 +1,9 @@
+seed: 42
+target: priority_score
+model:
+  type: xgboost
+  device: cpu
+  tree_method: hist
+training:
+  test_size: 0.15
+  validation_size: 0.15

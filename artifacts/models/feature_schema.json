@@ -1,0 +1,65 @@
+{
+    "features": [
+        "department",
+        "section_id",
+        "asset_id",
+        "asset_type",
+        "task_type",
+        "defect_type",
+        "severity",
+        "criticality",
+        "days_to_deadline",
+        "asset_age",
+        "failure_history",
+        "maintenance_frequency",
+        "estimated_duration_hours",
+        "required_team_size",
+        "safety_impact_encoded",
+        "train_traffic_density",
+        "expected_train_conflicts",
+        "historical_failure_rate",
+        "power_block_required",
+        "signal_block_required",
+        "track_block_required"
+    ],
+    "categorical_features": [
+        "department",
+        "section_id",
+        "asset_id",
+        "asset_type",
+        "task_type",
+        "defect_type",
+        "criticality"
+    ],
+    "numerical_features": [
+        "severity",
+        "days_to_deadline",
+        "asset_age",
+        "failure_history",
+        "maintenance_frequency",
+        "estimated_duration_hours",
+        "required_team_size",
+        "safety_impact_encoded",
+        "train_traffic_density",
+        "expected_train_conflicts",
+        "historical_failure_rate",
+        "power_block_required",
+        "signal_block_required",
+        "track_block_required"
+    ],
+    "target_name": "priority_score",
+    "training_config": {
+        "seed": 42,
+        "target": "priority_score",
+        "model": {
+            "type": "xgboost",
+            "device": "cpu",
+            "tree_method": "hist"
+        },
+        "training": {
+            "test_size": 0.15,
+            "validation_size": 0.15
+        }
+    },
+    "random_seed": 42
+}

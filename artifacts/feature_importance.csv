@@ -1,0 +1,16 @@
+Feature,Importance
+severity,0.724144
+criticality,0.22812866
+safety_impact_encoded,0.041595634
+train_traffic_density,0.003866209
+days_to_deadline,0.0018370886
+section_id,0.00026373964
+maintenance_frequency,8.214953e-05
+asset_id,4.2254527e-05
+historical_failure_rate,2.4716875e-05
+defect_type,1.1367768e-05
+task_type,1.516753e-06
+failure_history,5.520072e-07
+asset_age,5.4563947e-07
+asset_type,5.143278e-07
+expected_train_conflicts,4.207363e-07
