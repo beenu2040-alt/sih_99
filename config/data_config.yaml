@@ -1,0 +1,56 @@
+# SIH PS 26027 - Synthetic Data Configuration
+# SYNTHETIC DATA FOR SIH PS 26027
+# This data does NOT represent actual Indian Railways infrastructure.
+
+seed: 42
+
+# Network dimensions
+num_stations: 50
+num_sections: 75
+num_trains: 200
+num_assets: 1000
+num_engineering_tasks: 4000
+num_traction_tasks: 3000
+num_signalling_tasks: 3000
+history_months: 12
+
+# Date range
+start_date: "2025-01-01"
+end_date: "2025-12-31"
+
+# Corridor configuration
+corridor_name: "Synthetic Indian Railways Corridor"
+num_divisions: 5
+
+# Train type distribution (proportions)
+train_type_distribution:
+  Express: 0.20
+  Superfast: 0.15
+  Passenger: 0.20
+  EMU: 0.10
+  MEMU: 0.10
+  Freight: 0.20
+  Special: 0.05
+
+# Asset distribution across departments
+asset_distribution:
+  engineering: 400    # AST0001-AST0400
+  traction: 300       # AST0401-AST0700
+  signalling: 300     # AST0701-AST1000
+
+# Maintenance severity distribution (proportions)
+severity_distribution:
+  1: 0.10   # Critical
+  2: 0.20   # High
+  3: 0.35   # Medium
+  4: 0.25   # Low
+  5: 0.10   # Very Low
+
+# Traffic parameters
+peak_hours: [8, 9, 10, 17, 18, 19]
+off_peak_hours: [0, 1, 2, 3, 4, 23]
+goods_forecast_windows_hours: 2
+
+# Block history parameters
+num_historical_blocks: 2000
+good_block_ratio: 0.6

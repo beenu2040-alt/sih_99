@@ -1,0 +1,76 @@
+section_id,section_name,source_station_id,destination_station_id,source_station,destination_station,distance_km,track_type,number_of_tracks,electrified,maximum_speed_kmph,section_capacity,asset_density,section_length_category
+SEC001,Rajpur Junction - Krishnanagar,ST001,ST002,Rajpur Junction,Krishnanagar,12.8,Triple,3,True,110,53,3.71,Short
+SEC002,Krishnanagar - Devgarh,ST002,ST003,Krishnanagar,Devgarh,38.8,Triple,3,True,130,51,1.59,Long
+SEC003,Devgarh - Sundarpur,ST003,ST004,Devgarh,Sundarpur,27.2,Double,2,True,110,47,2.76,Medium
+SEC004,Sundarpur - Rameshwar,ST004,ST005,Sundarpur,Rameshwar,20.3,Double,2,False,110,45,2.52,Medium
+SEC005,Rameshwar - Bhimtal,ST005,ST006,Rameshwar,Bhimtal,40.7,Double,2,True,100,45,1.79,Long
+SEC006,Bhimtal - Sultanpur Road,ST006,ST007,Bhimtal,Sultanpur Road,30.1,Triple,3,True,160,58,3.11,Long
+SEC007,Sultanpur Road - Vikramgarh,ST007,ST008,Sultanpur Road,Vikramgarh,23.4,Quadruple,4,True,160,68,3.23,Medium
+SEC008,Vikramgarh - Chandrapur,ST008,ST009,Vikramgarh,Chandrapur,13.4,Triple,3,True,120,52,4.07,Short
+SEC009,Chandrapur - Shivpuri,ST009,ST010,Chandrapur,Shivpuri,23.4,Quadruple,4,True,120,65,2.61,Medium
+SEC010,Shivpuri - Kashipur,ST010,ST011,Shivpuri,Kashipur,20.0,Double,2,False,160,40,3.33,Medium
+SEC011,Kashipur - Madhuban,ST011,ST012,Kashipur,Madhuban,33.9,Double,2,True,130,43,4.47,Long
+SEC012,Madhuban - Dharmapur,ST012,ST013,Madhuban,Dharmapur,28.7,Triple,3,True,100,54,3.97,Medium
+SEC013,Dharmapur - Gopalganj,ST013,ST014,Dharmapur,Gopalganj,24.0,Triple,3,True,140,56,2.14,Medium
+SEC014,Gopalganj - Kamalpur,ST014,ST015,Gopalganj,Kamalpur,38.5,Double,2,True,110,43,1.92,Long
+SEC015,Kamalpur - Narayanpur,ST015,ST016,Kamalpur,Narayanpur,28.2,Triple,3,True,130,57,2.59,Medium
+SEC016,Narayanpur - Bharatgarh,ST016,ST017,Narayanpur,Bharatgarh,16.1,Quadruple,4,True,100,64,1.96,Medium
+SEC017,Bharatgarh - Lalgarh,ST017,ST018,Bharatgarh,Lalgarh,32.4,Double,2,True,130,45,3.29,Long
+SEC018,Lalgarh - Sitapur City,ST018,ST019,Lalgarh,Sitapur City,19.5,Double,2,True,100,40,3.55,Medium
+SEC019,Sitapur City - Haripur,ST019,ST020,Sitapur City,Haripur,20.0,Double,2,True,100,43,2.8,Medium
+SEC020,Haripur - Anandpur Sahib,ST020,ST021,Haripur,Anandpur Sahib,40.6,Double,2,False,120,47,3.79,Long
+SEC021,Anandpur Sahib - Kalyanpur,ST021,ST022,Anandpur Sahib,Kalyanpur,15.2,Double,2,True,160,47,3.33,Medium
+SEC022,Kalyanpur - Vijaypur,ST022,ST023,Kalyanpur,Vijaypur,34.9,Double,2,True,140,39,3.3,Long
+SEC023,Vijaypur - Ratangarh,ST023,ST024,Vijaypur,Ratangarh,15.4,Double,2,True,120,42,1.67,Medium
+SEC024,Ratangarh - Shyamnagar,ST024,ST025,Ratangarh,Shyamnagar,40.4,Quadruple,4,True,130,64,4.43,Long
+SEC025,Shyamnagar - Durgapur East,ST025,ST026,Shyamnagar,Durgapur East,15.8,Double,2,True,140,41,2.3,Medium
+SEC026,Durgapur East - Pratapgarh,ST026,ST027,Durgapur East,Pratapgarh,24.7,Quadruple,4,True,140,66,3.64,Medium
+SEC027,Pratapgarh - Mohanpur,ST027,ST028,Pratapgarh,Mohanpur,32.2,Double,2,True,140,46,1.86,Long
+SEC028,Mohanpur - Bhavnagar Term,ST028,ST029,Mohanpur,Bhavnagar Term,22.1,Double,2,True,110,42,1.52,Medium
+SEC029,Bhavnagar Term - Ramanagar,ST029,ST030,Bhavnagar Term,Ramanagar,13.8,Triple,3,True,100,56,1.71,Short
+SEC030,Ramanagar - Kishangarh,ST030,ST031,Ramanagar,Kishangarh,32.1,Double,2,True,110,46,2.23,Long
+SEC031,Kishangarh - Jagatpur,ST031,ST032,Kishangarh,Jagatpur,24.2,Double,2,True,160,45,2.56,Medium
+SEC032,Jagatpur - Nandigram Halt,ST032,ST033,Jagatpur,Nandigram Halt,37.9,Double,2,True,160,40,1.68,Long
+SEC033,Nandigram Halt - Tulsipur,ST033,ST034,Nandigram Halt,Tulsipur,36.0,Triple,3,True,110,54,3.11,Long
+SEC034,Tulsipur - Govindpur,ST034,ST035,Tulsipur,Govindpur,17.5,Double,2,True,100,46,3.92,Medium
+SEC035,Govindpur - Keshavpur,ST035,ST036,Govindpur,Keshavpur,14.9,Quadruple,4,True,140,63,4.41,Short
+SEC036,Keshavpur - Dinapur Cantonment,ST036,ST037,Keshavpur,Dinapur Cantonment,37.5,Quadruple,4,True,130,70,2.14,Long
+SEC037,Dinapur Cantonment - Amritpur,ST037,ST038,Dinapur Cantonment,Amritpur,13.8,Double,2,True,130,43,4.28,Short
+SEC038,Amritpur - Fatehpur Sikri,ST038,ST039,Amritpur,Fatehpur Sikri,20.6,Triple,3,True,160,59,3.49,Medium
+SEC039,Fatehpur Sikri - Indrapur,ST039,ST040,Fatehpur Sikri,Indrapur,17.7,Double,2,True,100,47,1.68,Medium
+SEC040,Shivpuri - Jagdishpur Jn,ST010,ST041,Shivpuri,Jagdishpur Jn,9.5,Single,1,True,100,22,3.4,Short
+SEC041,Jagdishpur Jn - Kailashpur,ST041,ST042,Jagdishpur Jn,Kailashpur,13.6,Single,1,True,100,25,1.3,Short
+SEC042,Kailashpur - Lakshmipur,ST042,ST043,Kailashpur,Lakshmipur,15.4,Double,2,True,80,35,2.64,Medium
+SEC043,Haripur - Manikpur Jn,ST020,ST044,Haripur,Manikpur Jn,17.5,Double,2,True,110,33,1.66,Medium
+SEC044,Manikpur Jn - Niranjanpur,ST044,ST045,Manikpur Jn,Niranjanpur,27.4,Single,1,True,80,22,2.15,Medium
+SEC045,Niranjanpur - Omkareshwar Road,ST045,ST046,Niranjanpur,Omkareshwar Road,37.9,Double,2,True,100,36,1.66,Long
+SEC046,Omkareshwar Road - Prakashpur,ST046,ST047,Omkareshwar Road,Prakashpur,34.4,Double,2,False,110,34,1.39,Long
+SEC047,Ramanagar - Qadirganj,ST030,ST048,Ramanagar,Qadirganj,29.1,Double,2,True,80,37,3.04,Medium
+SEC048,Qadirganj - Raghunathpur,ST048,ST049,Qadirganj,Raghunathpur,27.9,Single,1,False,100,24,1.29,Medium
+SEC049,Raghunathpur - Srinagar Town,ST049,ST050,Raghunathpur,Srinagar Town,24.6,Single,1,True,100,27,1.86,Medium
+SEC050,Rameshwar - Kamalpur,ST005,ST015,Rameshwar,Kamalpur,33.6,Double,2,True,110,32,1.23,Long
+SEC051,Kamalpur - Shyamnagar,ST015,ST025,Kamalpur,Shyamnagar,16.3,Double,2,True,100,37,3.45,Medium
+SEC052,Shyamnagar - Govindpur,ST025,ST035,Shyamnagar,Govindpur,21.3,Single,1,True,80,22,1.19,Medium
+SEC053,Rajpur Junction - Shivpuri,ST001,ST010,Rajpur Junction,Shivpuri,35.1,Triple,3,True,110,46,2.38,Long
+SEC054,Shivpuri - Haripur,ST010,ST020,Shivpuri,Haripur,9.3,Double,2,True,80,34,1.53,Short
+SEC055,Haripur - Ramanagar,ST020,ST030,Haripur,Ramanagar,11.1,Single,1,False,120,26,2.87,Short
+SEC056,Ramanagar - Indrapur,ST030,ST040,Ramanagar,Indrapur,15.1,Triple,3,True,100,45,1.06,Medium
+SEC057,Govindpur - Indrapur,ST035,ST040,Govindpur,Indrapur,18.0,Double,2,False,100,34,1.4,Medium
+SEC058,Rameshwar - Jagdishpur Jn,ST005,ST041,Rameshwar,Jagdishpur Jn,19.5,Double,2,True,120,33,1.5,Medium
+SEC059,Lakshmipur - Kamalpur,ST043,ST015,Lakshmipur,Kamalpur,18.5,Triple,3,False,100,43,1.06,Medium
+SEC060,Prakashpur - Ramanagar,ST047,ST030,Prakashpur,Ramanagar,17.8,Single,1,False,110,24,2.6,Medium
+SEC061,Srinagar Town - Govindpur,ST050,ST035,Srinagar Town,Govindpur,37.4,Double,2,True,80,32,3.19,Long
+SEC062,Krishnanagar - Vikramgarh,ST002,ST008,Krishnanagar,Vikramgarh,25.4,Single,1,False,80,22,2.49,Medium
+SEC063,Vikramgarh - Gopalganj,ST008,ST014,Vikramgarh,Gopalganj,31.6,Double,2,True,80,35,3.25,Long
+SEC064,Gopalganj - Kalyanpur,ST014,ST022,Gopalganj,Kalyanpur,9.3,Single,1,True,100,24,2.08,Short
+SEC065,Kalyanpur - Mohanpur,ST022,ST028,Kalyanpur,Mohanpur,35.6,Triple,3,True,80,47,3.25,Long
+SEC066,Mohanpur - Tulsipur,ST028,ST034,Mohanpur,Tulsipur,28.0,Double,2,True,110,36,1.32,Medium
+SEC067,Tulsipur - Fatehpur Sikri,ST034,ST039,Tulsipur,Fatehpur Sikri,36.2,Double,2,True,100,36,2.42,Long
+SEC068,Devgarh - Madhuban,ST003,ST012,Devgarh,Madhuban,33.0,Double,2,True,100,35,2.96,Long
+SEC069,Madhuban - Lalgarh,ST012,ST018,Madhuban,Lalgarh,17.7,Double,2,True,100,36,2.18,Medium
+SEC070,Lalgarh - Durgapur East,ST018,ST026,Lalgarh,Durgapur East,31.9,Triple,3,True,80,44,2.29,Long
+SEC071,Durgapur East - Nandigram Halt,ST026,ST033,Durgapur East,Nandigram Halt,18.1,Double,2,False,100,37,1.78,Medium
+SEC072,Nandigram Halt - Amritpur,ST033,ST038,Nandigram Halt,Amritpur,12.4,Triple,3,True,120,46,3.12,Short
+SEC073,Sultanpur Road - Bharatgarh,ST007,ST017,Sultanpur Road,Bharatgarh,20.4,Single,1,True,100,27,2.74,Medium
+SEC074,Bharatgarh - Pratapgarh,ST017,ST027,Bharatgarh,Pratapgarh,15.3,Double,2,True,80,32,2.95,Medium
+SEC075,Indrapur - Manikpur Jn,ST040,ST044,Indrapur,Manikpur Jn,32.1,Single,1,True,120,22,2.39,Long

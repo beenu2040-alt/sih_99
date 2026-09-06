@@ -1,0 +1,21 @@
+========================================================
+DATA VALIDATION REPORT
+SYNTHETIC DATA FOR SIH PS 26027
+Generated: 2026-09-06 14:38:44
+========================================================
+
+railway_network: PASS (75 records)
+railway_timetable: PASS (72602 records)
+engineering_maintenance: PASS (4000 records)
+traction_maintenance: PASS (3000 records)
+signalling_maintenance: PASS (3000 records)
+goods_train_forecast: PASS (26100 records)
+maintenance_block_history: PASS (2000 records)
+
+Duplicate validation: PASS
+Missing value validation: PASS
+Foreign key validation: PASS
+Date validation: PASS
+Value range validation: PASS
+
+Overall: PASS
