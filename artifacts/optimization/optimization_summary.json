@@ -1,0 +1,15 @@
+{
+  "solver_status": "FEASIBLE",
+  "objective_value": 4724721,
+  "best_bound": 6967047,
+  "solver_time_seconds": 60.346,
+  "total_tasks": 4612,
+  "scheduled_tasks": 4545,
+  "unscheduled_tasks": 67,
+  "total_blocks": 4007,
+  "average_priority": 60.84,
+  "high_priority_scheduled": 2816,
+  "critical_priority_scheduled": 1291,
+  "total_train_conflict_cost": 1049294.3,
+  "block_consolidation_ratio": 1.13
+}
