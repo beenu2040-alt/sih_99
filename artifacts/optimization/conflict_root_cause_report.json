@@ -1,0 +1,33 @@
+{
+  "train_conflicts_analysis": {
+    "1. how_train_occupancy_loaded": "Loaded via data_loader.py:load_train_occupancy() which reads the CSV, validates column names, and returns a DataFrame.",
+    "2. how_intervals_represented": "In preprocessing.py:build_occupancy_lookup(), intervals are represented as a dictionary mapping section_id to a sorted list of tuples (start_min, end_min) in integer minutes from the global epoch.",
+    "3. how_maintenance_times_represented": "Maintenance task boundaries are parsed as datetime, converted to minutes since epoch, and snapped to the nearest grid (TIME_GRANULARITY_MINUTES). Represented as start/end integer variables in the CP-SAT model.",
+    "4. cp_sat_train_conflict_constraints": "In constraints.py:add_train_occupancy_constraints(), a boolean auxiliary variable is created for each relevant occupancy interval, creating a disjunction (end <= occ_s OR start >= occ_e) only if the task is scheduled.",
+    "5. are_constraints_applied_to_every_task": "No. The constraints are only applied to tasks that require an infrastructure block (track_block_required, signal_block_required, or power_block_required = True). Tasks without block requirements are exempt.",
+    "6. section_id_matching": "Correct. Occupancy windows are looked up using tv.section_id.",
+    "7. interval_boundaries": "Correct. Excludes windows entirely outside the task's earliest/latest feasible bounds. Boundary inequalities (end <= occ_s, start >= occ_e) are correct for non-overlapping intervals.",
+    "8. datetime_to_integer": "Consistent. Both occupancy times and task times are converted to integer minutes since epoch (2025-01-01 00:00).",
+    "9. inheritance_of_constraints": "Constraints are applied at the task level during CP-SAT optimization. Blocks are formed *after* optimization in schedule.py. Since all tasks in a block satisfied their own constraints during optimization, the block implicitly respects them.",
+    "10. cp_sat_vs_validator": "The validator (inspector.py) checked ALL tasks against train occupancy, ignoring the block requirement flags. The CP-SAT constraints correctly exempt tasks that do not require an infrastructure block.",
+    "examples": {
+      "SIG3000": "Does not require power, signal, or track blocks. Exempt from train occupancy in the model, but flagged by the naive validator.",
+      "SIG1085": "Does not require power, signal, or track blocks. Exempt from train occupancy, flagged by validator."
+    },
+    "diagnosis": "B. A validator false positive"
+  },
+  "resource_conflicts_analysis": {
+    "1. resource_constraint_construction": "In model.py, task IDs are grouped into dictionaries keyed by '{section_id}__{resource_name}' (e.g. SEC001__track). In constraints.py, a NoOverlap constraint is added to the intervals of all tasks in each group.",
+    "2. overlapping_blocks_prohibited": "Only if they share the exact same exclusive resource requirement on the same section. Blocks requiring different resources (e.g. track vs signal), or no resources, are allowed to overlap.",
+    "3. all_blocks_participate": "No. Tasks that do not require a specific resource do not participate in that resource's NoOverlap constraint.",
+    "4. block_grouping_create_overlaps": "schedule.py groups tasks into blocks only if their intervals overlap or are adjacent AND at least one has can_combine=True. Tasks that overlap but don't share resources (and aren't combined) form distinct overlapping blocks, which is valid.",
+    "5. identifier_normalization": "Consistent. Formatted as '{section_id}__{resource_name}'.",
+    "6. cp_sat_vs_validator": "The validator naively checked if ANY two blocks in the same section overlapped, regardless of their resource requirements. The CP-SAT model correctly applies NoOverlap only per specific resource type.",
+    "examples": {
+      "BLK00045_BLK00046": "BLK00045 contains SIG2999 (signal block). BLK00046 contains ENG1537 (track block). They use different resources, so they can overlap.",
+      "BLK00085_BLK00086": "BLK00085 contains SIG1843 (signal block). BLK00086 contains SIG2958 (none/no block). They don't conflict on resources."
+    },
+    "diagnosis": "B. A validator false positive"
+  },
+  "overall_conclusion": "Both the 51 train conflicts and 14 resource conflicts reported by the inspector script are Validator False Positives. The optimizer's model and constraints are correct and functioning as designed. The inspection script used overly strict logic that ignored task resource requirements."
+}

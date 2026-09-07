@@ -1,0 +1,63 @@
+{
+    "total_input_tasks": 4612,
+    "scheduled_tasks": 4545,
+    "unscheduled_tasks": 67,
+    "total_maintenance_blocks": 4007,
+    "tasks_per_block_avg": 1.13,
+    "highest_priority_scheduled": [
+        {
+            "task_id": "ENG2528",
+            "predicted_priority_score": 99.59
+        },
+        {
+            "task_id": "TRC0423",
+            "predicted_priority_score": 99.5
+        },
+        {
+            "task_id": "ENG1371",
+            "predicted_priority_score": 99.5
+        },
+        {
+            "task_id": "ENG2386",
+            "predicted_priority_score": 99.5
+        },
+        {
+            "task_id": "TRC2678",
+            "predicted_priority_score": 99.5
+        }
+    ],
+    "highest_priority_unscheduled": [
+        {
+            "task_id": "TRC1015",
+            "predicted_priority_score": 98.63
+        },
+        {
+            "task_id": "SIG0267",
+            "predicted_priority_score": 97.2
+        },
+        {
+            "task_id": "TRC0017",
+            "predicted_priority_score": 96.38
+        },
+        {
+            "task_id": "ENG2942",
+            "predicted_priority_score": 93.9
+        },
+        {
+            "task_id": "SIG1479",
+            "predicted_priority_score": 84.79
+        }
+    ],
+    "block_consolidation": {
+        "blocks_with_1_task": 3565,
+        "blocks_with_multiple_tasks": 442,
+        "max_tasks_in_block": 8
+    },
+    "violations": {
+        "train_conflicts": [],
+        "resource_conflicts": [],
+        "deadline_violations": [],
+        "duration_violations": [],
+        "duplicate_assignments": []
+    }
+}
