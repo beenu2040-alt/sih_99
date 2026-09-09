@@ -70,6 +70,11 @@ def _build_combination_bonus(ctx: ModelContext) -> List:
                 # Average priority bonus
                 avg_pri = (a.priority_int + b.priority_int) // 2
                 weight = avg_pri * cfg.CONSOLIDATION_WEIGHT // 100
+                
+                # Cross-department coordination multiplier
+                if a.department != b.department:
+                    weight *= 2
+
                 weight = max(weight, 1)
 
                 bonuses.append((overlap, weight))

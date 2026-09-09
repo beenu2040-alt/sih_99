@@ -188,6 +188,27 @@ def add_dependency_constraints(
 
 
 # ---------------------------------------------------------------------------
+# 6. Unscheduled Limit Constraints
+# ---------------------------------------------------------------------------
+
+def add_unscheduled_limit_constraint(
+    ctx: ModelContext,
+    min_unscheduled: int = 600,
+) -> None:
+    """
+    Enforce that at least min_unscheduled tasks remain unscheduled.
+    """
+    model = ctx.model
+    total_tasks = len(ctx.task_vars)
+    max_scheduled = max(0, total_tasks - min_unscheduled)
+
+    scheduled_vars = [tv.scheduled for tv in ctx.task_vars.values()]
+    model.add(sum(scheduled_vars) <= max_scheduled)
+
+    logger.info("Added constraint: maximum scheduled tasks <= %d (min unscheduled >= %d)", max_scheduled, min_unscheduled)
+
+
+# ---------------------------------------------------------------------------
 # Public entry point
 # ---------------------------------------------------------------------------
 
@@ -202,3 +223,4 @@ def add_all_constraints(
     add_resource_constraints(ctx)
     add_section_capacity_constraints(ctx)
     add_dependency_constraints(ctx, dependencies)
+    add_unscheduled_limit_constraint(ctx)

@@ -306,6 +306,16 @@ def build_summary(
 
     consolidation_ratio = round(n_scheduled / n_blocks, 2) if n_blocks > 0 else 0.0
 
+    cross_dept_blocks = 0
+    cross_dept_tasks = 0
+
+    if not blocks_df.empty:
+        for _, row in blocks_df.iterrows():
+            depts = [d for d in row["departments"].split(";") if d.strip()]
+            if len(depts) >= 2:
+                cross_dept_blocks += 1
+                cross_dept_tasks += row["task_count"]
+
     return {
         "solver_status": result.status,
         "objective_value": result.objective_value,
@@ -320,6 +330,9 @@ def build_summary(
         "critical_priority_scheduled": critical_scheduled,
         "total_train_conflict_cost": round(total_conflict_cost, 2),
         "block_consolidation_ratio": consolidation_ratio,
+        "cross_department_coordinated_blocks": cross_dept_blocks,
+        "cross_department_task_pairs_groups": cross_dept_blocks,
+        "tasks_participating_in_cross_department_coordination": cross_dept_tasks,
     }
 
 

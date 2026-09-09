@@ -3,19 +3,19 @@ OR-Tools CP-SAT Maintenance Block Optimizer — Solver Log
 ============================================================
 
 Solver status       : FEASIBLE
-Objective value     : 4724721
-Best bound          : 6967047
-Solve time (s)      : 60.346
+Objective value     : 2530090
+Best bound          : 8222959
+Solve time (s)      : 61.099
 Conflicts           : 0
-Branches            : 247144
+Branches            : 197026
 
 Total tasks         : 4612
-Scheduled tasks     : 4545
-Unscheduled tasks   : 67
-Total blocks        : 4007
-Consolidation ratio : 1.13
-Average priority    : 60.84
-Total conflict cost : 1049294.3
+Scheduled tasks     : 2285
+Unscheduled tasks   : 2327
+Total blocks        : 1987
+Consolidation ratio : 1.15
+Average priority    : 62.49
+Total conflict cost : 530910.2
 
 Validation result   : PASSED
 
